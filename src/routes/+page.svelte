@@ -1,5 +1,7 @@
 <script>
-	import BodySection from '$lib/components/Sections/BodySection.svelte';
+	import CompetingSection from '$lib/components/Sections/CompetingSection.svelte';
+	import DataSection from '$lib/components/Sections/DataSection.svelte';
+	import RelevanceSection from '$lib/components/Sections/RelevanceSection.svelte';
 </script>
 
 <div class="hero-section mb-8">
@@ -8,23 +10,9 @@
 </div>
 
 <div class="body-section">
-	<BodySection>
-		<p>
-			Kaggle is a great place to learn for newcomers and data science enthusiasts - learning
-			competitions to take your first steps, integrated environments that make spinning up a model
-			easier than ever, interesting problem statements to experiment on different domains and
-			learning through collaboration and friendly competition.
-		</p>
-
-		<p>
-			But it still gets a lot of flak because it isn't a mirror to working on actual data science
-			problems in the real world. Experts contend that datasets are spoon-fed - skipping any actual
-			data collection and cleaning process, competition problems are not reflective of the typical
-			day-to-day work of a data scientist, sometimes the quality of the data is poor or it's hard to
-			source in real projects which is never the case in Kaggle projects, timelines are unrealistic
-			in comparison to real-life projects.
-		</p>
-	</BodySection>
+	<CompetingSection></CompetingSection>
+	<DataSection></DataSection>
+	<RelevanceSection></RelevanceSection>
 </div>
 
 <style lang="scss">

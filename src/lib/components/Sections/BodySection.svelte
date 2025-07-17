@@ -1,18 +1,18 @@
 <script>
-	let { children } = $props();
+	let { title = '', subtitle = '', chapter = 0, children } = $props();
 </script>
 
 <section class="body-section">
 	<div class="title-container">
 		<div class="title-row">
 			<div class="chapter-number">
-				<p>1</p>
+				<p>{chapter}</p>
 			</div>
 
-			<h2 class="title">Competing in Kaggle Competitions don't make you a better Data Scientist</h2>
+			<h2 class="title">{title}</h2>
 		</div>
 		<div class="subtitle-row">
-			<p class="subtitle">... But that depends on how you define “competing”</p>
+			<p class="subtitle">{subtitle}</p>
 		</div>
 	</div>
 
@@ -24,6 +24,7 @@
 <style lang="scss">
 	section.body-section {
 		width: 100%;
+		margin-bottom: 100px;
 
 		.title-container {
 			margin-bottom: 80px;
@@ -33,7 +34,7 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 			gap: 2rem;
 
 			padding-bottom: 16px;
@@ -70,6 +71,11 @@
 
 			padding: 10px 12px;
 			border-bottom: 1px solid #444;
+
+			p {
+				text-align: right;
+				text-wrap: balance;
+			}
 		}
 
 		.text-container {
