@@ -494,8 +494,10 @@
 							style="line-height: 22px;font-size: 14px;color: rgb(51,51,51);font-family: Roboto Serif;font-weight: 400;"
 							class="roboto_serif--regular"
 						>
-							Data loading, cleaning and exploration form the bulk of the work in the machine
-							learning process
+							<span class="text-highlight maroon-background">Data loading</span>,
+							<span class="text-highlight yellow-background">cleaning</span> and
+							<span class="text-highlight grey-background">exploration</span> form the bulk of the work
+							in the machine learning process
 						</span>
 					</div>
 				</div>
@@ -744,8 +746,10 @@
 							style="line-height: 22px;font-size: 14px;color: rgb(51,51,51);font-family: Roboto Serif;font-weight: 400;"
 							class="roboto_serif--regular"
 						>
-							Model selection, training and evaluation, and deployment are less time consuming in
-							comparison
+							<span class="text-highlight white-background">Model selection</span>,
+							<span class="text-highlight light-blue-background">training and evaluation</span>, and
+							<span class="text-highlight blue-background mt-[2px]">deployment</span> are less time consuming
+							in comparison
 						</span>
 					</div>
 				</div>
@@ -836,8 +840,10 @@
 							style="line-height: 24px;font-size: 16px;color: rgb(51,51,51);font-family: Roboto Serif;font-weight: 400;"
 							class="roboto_serif--regular"
 						>
-							Data loading, cleaning and exploration form the bulk of the work in the machine
-							learning process
+							<span class="text-highlight maroon-background">Data loading</span>,
+							<span class="text-highlight yellow-background">cleaning</span> and
+							<span class="text-highlight grey-background">exploration</span> form the bulk of the work
+							in the machine learning process
 						</span>
 					</div>
 				</div>
@@ -1081,8 +1087,10 @@
 							style="line-height: 24px;font-size: 16px;color: rgb(51,51,51);font-family: Roboto Serif;font-weight: 400;"
 							class="roboto_serif--regular"
 						>
-							Model selection, training and evaluation, and deployment are less time consuming in
-							comparison
+							<span class="text-highlight white-background">Model selection</span>,
+							<span class="text-highlight light-blue-background">training and evaluation</span>, and
+							<span class="text-highlight blue-background mt-[2px]">deployment</span> are less time consuming
+							in comparison
 						</span>
 					</div>
 				</div>
@@ -1173,8 +1181,10 @@
 							style="line-height: 28px;font-size: 18px;color: rgb(51,51,51);font-family: Roboto Serif;font-weight: 400;"
 							class="roboto_serif--regular"
 						>
-							Data loading, cleaning and exploration form the bulk of the work in the machine
-							learning process
+							<span class="text-highlight maroon-background">Data loading</span>,
+							<span class="text-highlight yellow-background">cleaning</span> and
+							<span class="text-highlight grey-background">exploration</span> form the bulk of the work
+							in the machine learning process
 						</span>
 					</div>
 				</div>
@@ -1418,8 +1428,10 @@
 							style="line-height: 28px;font-size: 18px;color: rgb(51,51,51);font-family: Roboto Serif;font-weight: 400;"
 							class="roboto_serif--regular"
 						>
-							Model selection, training and evaluation, and deployment are less time consuming in
-							comparison
+							<span class="text-highlight white-background">Model selection</span>,
+							<span class="text-highlight light-blue-background">training and evaluation</span>, and
+							<span class="text-highlight blue-background mt-[2px]">deployment</span> are less time consuming
+							in comparison
 						</span>
 					</div>
 				</div>
@@ -1429,7 +1441,44 @@
 	<div class="custom_html"></div>
 </div>
 
-<style>
+<style lang="scss">
+	/* CUSTOM STYLING */
+	.text-highlight {
+		display: inline-block;
+		background-color: var(--color-palette-grey);
+		border-radius: 4px;
+		border: 1px solid #444;
+		padding: 0 5px;
+
+		font-weight: 500;
+
+		&.yellow-background {
+			background-color: var(--color-palette-yellow);
+			color: white;
+		}
+		&.maroon-background {
+			background-color: var(--color-palette-maroon);
+			color: white;
+		}
+		&.grey-background {
+			background-color: var(--color-palette-grey);
+			color: #444;
+		}
+		&.white-background {
+			background-color: white;
+			color: #444;
+		}
+		&.light-blue-background {
+			background-color: var(--color-palette-blue-light);
+			color: white;
+		}
+		&.blue-background {
+			background-color: var(--color-palette-blue);
+			color: white;
+		}
+	}
+
+	/* DEFAULT MILTON STYLING */
 	.milton__embed.milton--responsive {
 		max-width: 100%;
 		margin: 0 auto;

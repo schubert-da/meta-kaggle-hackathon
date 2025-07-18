@@ -14,6 +14,3 @@
 	<DataSection></DataSection>
 	<RelevanceSection></RelevanceSection>
 </div>
-
-<style lang="scss">
-</style>
