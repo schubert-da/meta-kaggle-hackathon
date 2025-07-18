@@ -25,6 +25,16 @@
     /* font-size 5: 39.8131px → 61.0352px */
     --font-size-5: clamp(2.4883rem, 2.027rem + 2.3067vw, 3.8147rem);
 
+    /* COLORS */
+    --color-palette-pink: #F1CFCC;
+    --color-palette-maroon: #983D4F;
+    --color-palette-grey: #C8CDD5;
+    --color-palette-blue: #1D75A5;
+    --color-palette-blue-light: #7EAEC9;
+    --color-palette-green: #517C7A;
+    --color-palette-yellow: #E4B26C;
+
+    /* SPACING */
     --page-padding: clamp(1rem, -0.091rem + 5.455vw, 4rem);
 }
 
