@@ -1,5 +1,6 @@
 <script>
 	import BodySection from './BodySection.svelte';
+	import TimeSpentChart from '../Milton/TimeSpentChart.svelte';
 </script>
 
 <BodySection
@@ -21,7 +22,9 @@
 				do I go about collecting it and the challenges that would entail.
 			</p>
 
-			<div class="chart-placeholder">time spent in activities from previous MLDS submission</div>
+			<div class="chart-container">
+				<TimeSpentChart />
+			</div>
 
 			<p>
 				I do agree with this - we could do more on sourcing data although this wouldn’t lend itself
