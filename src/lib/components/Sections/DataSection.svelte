@@ -1,6 +1,7 @@
 <script>
 	import BodySection from './BodySection.svelte';
 	import TimeSpentChart from '../Milton/TimeSpentChart.svelte';
+	import DatasetAccessesChart from '../Milton/DatasetAccessesChart.svelte';
 </script>
 
 <BodySection
@@ -10,16 +11,13 @@
 >
 	<p>This piece of criticism often comes in two forms:</p>
 
-	<ol class="mb-6 ml-6">
+	<ol class="mb-6">
 		<li>
 			<strong class="mb-4 block">1. There is no data collection process:</strong>
 			<p>
 				While there have been competitions in the past that have allowed external data, for the most
 				part you have the dataset provided - you never have to ask yourself what data would be
-				useful and how do I go about collecting it and the challenges that would entail. While there
-				have been competitions in the past that have allowed external data, for the most part you
-				have the dataset provided - you never have to ask yourself what data would be useful and how
-				do I go about collecting it and the challenges that would entail.
+				useful and how do I go about collecting it and the challenges that would entail.
 			</p>
 
 			<div class="chart-container">
@@ -33,7 +31,7 @@
 		</li>
 	</ol>
 
-	<ol class="ml-6">
+	<ol>
 		<li>
 			<strong class="mb-2 block">2. There is no data collection process:</strong>
 			<p>
@@ -66,5 +64,7 @@
 
 	<p>Even the dataset usage over the years has grown considerably:</p>
 
-	<div class="chart-placeholder">charts on activity after competition starts</div>
+	<div class="chart-container">
+		<DatasetAccessesChart />
+	</div>
 </BodySection>
