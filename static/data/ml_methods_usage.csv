@@ -1,0 +1,14 @@
+method,percentage
+Linear or Logistic Regression,0.759460861
+Decision Trees or Random Forests,0.713322965
+"Gradient Boosting Machines (xgboost, lightgbm, etc)",0.593053396
+Convolutional Neural Networks,0.347848626
+Bayesian Approaches,0.268014515
+"Dense Neural Networks (MLPs, etc)",0.252980819
+Recurrent Neural Networks,0.241057543
+"Transformer Networks (BERT, gpt-3, etc)",0.21565578
+"Autoencoder Networks (DAE, VAE, etc)",0.10160705
+Graph Neural Networks,0.082426128
+Generative Adversarial Networks,0.062726801
+Evolutionary Approaches,0.054950752
+Other,0.028512182
