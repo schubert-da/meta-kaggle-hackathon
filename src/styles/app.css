@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
 
@@ -51,6 +51,14 @@ body {
     color: #222;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -93,4 +101,44 @@ section {
 
     width: 100%;
     margin: 80px 0;
+}
+
+.milton__embed .text-highlight {
+    display: inline-block;
+    background-color: var(--color-palette-grey);
+    border-radius: 4px;
+    border: 1px solid #444;
+    padding: 0 5px;
+
+    font-weight: 500;
+}
+
+.milton__embed .text-highlight.yellow-background {
+    background-color: var(--color-palette-yellow);
+    color: white;
+}
+
+.milton__embed .text-highlight.maroon-background {
+    background-color: var(--color-palette-maroon);
+    color: white;
+}
+
+.milton__embed .text-highlight.grey-background {
+    background-color: var(--color-palette-grey);
+    color: #444;
+}
+
+.milton__embed .text-highlight.white-background {
+    background-color: white;
+    color: #444;
+}
+
+.milton__embed .text-highlight.light-blue-background {
+    background-color: var(--color-palette-blue-light);
+    color: white;
+}
+
+.milton__embed .text-highlight.blue-background {
+    background-color: var(--color-palette-blue);
+    color: white;
 }
