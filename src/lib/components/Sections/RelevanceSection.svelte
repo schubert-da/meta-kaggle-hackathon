@@ -1,4 +1,5 @@
 <script>
+	import TechniquesTable from '../Charts/TechniquesTable.svelte';
 	import BodySection from './BodySection.svelte';
 </script>
 
@@ -19,7 +20,9 @@
 		dramatically in the last five years.
 	</p>
 
-	<div class="chart-placeholder">AI ML techniques used from Kaggle ML-DS survey</div>
+	<div class="chart-container">
+		<TechniquesTable></TechniquesTable>
+	</div>
 
 	<p>
 		There will never be a perfect substitute for on-the-job experience, so to expect Kaggle
