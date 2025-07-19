@@ -1,4 +1,5 @@
 <script>
+	import FirstCompetition from '../Milton/FirstCompetition.svelte';
 	import BodySection from './BodySection.svelte';
 </script>
 
@@ -28,7 +29,9 @@
 		Started' competitions.
 	</p>
 
-	<div class="chart-placeholder">first kernels competitions types</div>
+	<div class="chart-container">
+		<FirstCompetition></FirstCompetition>
+	</div>
 
 	<p>
 		Competitions are also where the community aspect of Kaggle is on full display. Competitors will
