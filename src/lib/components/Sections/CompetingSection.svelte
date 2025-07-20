@@ -1,4 +1,5 @@
 <script>
+	import CompetitionActivity from '../Milton/CompetitionActivity.svelte';
 	import FirstCompetition from '../Milton/FirstCompetition.svelte';
 	import BodySection from './BodySection.svelte';
 </script>
@@ -39,10 +40,8 @@
 		solution approaches, upvoting work they find interesting and much more.
 	</p>
 
-	<div class="chart-placeholder">charts on activity after competition starts</div>
-
-	<div class="chart-placeholder">
-		notebook creation after competition starts (forks too) - maybe as a scrolly?
+	<div class="chart-container">
+		<CompetitionActivity></CompetitionActivity>
 	</div>
 
 	<p>
