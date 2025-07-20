@@ -33,7 +33,7 @@
 
 	<ol>
 		<li>
-			<strong class="mb-2 block">2. There is no data collection process:</strong>
+			<strong class="mb-2 block">2. The data is too clean:</strong>
 			<p>
 				I understand where they're coming from but “too clean” is relative. Just about every
 				competition involves a fair bit of cleaning and data prep to start so saying that they're
@@ -57,9 +57,7 @@
 	<p>
 		This is especially true when it comes to individuals that are new to the platform. Learning
 		competitions are filled with example notebooks and discussions that help newcomers grasp
-		foundational concepts like python basics, data cleaning, linear regression, etc. When looking at
-		the data, the majority of users' published notebooks seem to be created for various 'Getting
-		Started' competitions.
+		foundational concepts like python basics, data cleaning, linear regression, etc.
 	</p>
 
 	<p>Even the dataset usage over the years has grown considerably:</p>

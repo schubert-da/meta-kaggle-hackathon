@@ -1,11 +1,12 @@
 <script>
 	import CompetitionActivity from '../Milton/CompetitionActivity.svelte';
 	import FirstCompetition from '../Milton/FirstCompetition.svelte';
+	import Sources from '../Sources.svelte';
 	import BodySection from './BodySection.svelte';
 </script>
 
 <BodySection
-	title="Competing in Kaggle Competitions don't make you a better Data Scientist"
+	title="Kaggle Competitions Don't Make You a Better Data Scientist"
 	subtitle="... But that depends on how you define “competing”"
 	chapter={1}
 >
@@ -32,6 +33,7 @@
 
 	<div class="chart-container">
 		<FirstCompetition></FirstCompetition>
+		<Sources></Sources>
 	</div>
 
 	<p>
