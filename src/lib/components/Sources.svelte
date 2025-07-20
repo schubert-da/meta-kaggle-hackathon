@@ -77,7 +77,7 @@
 	}
 
 	.title {
-		font-size: var(--font-size-0);
+		font-size: var(--font-size-1);
 		font-weight: 500;
 		color: #333;
 		text-align: left;
@@ -94,7 +94,7 @@
 	}
 
 	.accordion-panel {
-		border-top: 1px solid #f3f4f6;
+		border-top: 1px solid #ddd;
 	}
 
 	.panel-content {
@@ -104,7 +104,12 @@
 	}
 
 	:global(.panel-content p) {
+		max-width: 75ch;
 		font-size: 16px;
+		color: #555;
+	}
+
+	:global(.panel-content h3) {
 		color: #333;
 	}
 
