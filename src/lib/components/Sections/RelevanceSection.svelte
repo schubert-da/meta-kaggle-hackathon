@@ -1,5 +1,6 @@
 <script>
 	import TechniquesTable from '../Charts/TechniquesTable.svelte';
+	import TagsTable from '../Charts/TagsTable.svelte';
 	import BodySection from './BodySection.svelte';
 </script>
 
@@ -36,7 +37,9 @@
 		my 9-to-5.
 	</p>
 
-	<div class="chart-placeholder">different competition types</div>
+	<div class="chart-container">
+		<TagsTable></TagsTable>
+	</div>
 
 	<p>
 		As for Kaggle solutions not generalising to real life examples - there have been quite a few
