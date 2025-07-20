@@ -2,6 +2,7 @@
 	import BodySection from './BodySection.svelte';
 	import TimeSpentChart from '../Milton/TimeSpentChart.svelte';
 	import DatasetAccessesChart from '../Milton/DatasetAccessesChart.svelte';
+	import Sources from '../Sources.svelte';
 </script>
 
 <BodySection
@@ -22,6 +23,55 @@
 
 			<div class="chart-container">
 				<TimeSpentChart />
+				<Sources>
+					<div>
+						<div class="sources mb-6 flex flex-col gap-1">
+							<h3 class="text-lg">Sources</h3>
+							<p>
+								<span class="font-semibold">Dataset</span>: Anaconda State of Data Science Report
+								2020
+							</p>
+							<p>
+								<span class="font-semibold">Files</span>: Survey responses (manually extracted data)
+							</p>
+							<p>
+								<span class="font-semibold">Link</span>:
+								<a
+									href="https://www.kaggle.com/code/spitfire2nd/why-should-i-kaggle?scriptVersionId=251547825&cellId=13"
+									class="underline">Code link</a
+								>
+							</p>
+						</div>
+						<div class="methodology mb-8 flex flex-col gap-1">
+							<h3 class="text-lg">Methodology</h3>
+							<ol class="list-decimal pl-5">
+								<li>
+									<p class="mb-1">
+										Extract time allocation data from Anaconda's 2020 survey question about ML
+										workflow tasks
+									</p>
+								</li>
+								<li>
+									<p class="mb-1">
+										Structure data into categories: loading, cleaning, visualization, model
+										selection, training, and deployment
+									</p>
+								</li>
+								<li>
+									<p class="mb-1">
+										Create percentage-based visualization showing relative time spent on each ML
+										process step
+									</p>
+								</li>
+								<li>
+									<p class="mb-1">
+										Display results as horizontal bar chart with subtitle explaining survey context
+									</p>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</Sources>
 			</div>
 
 			<p>
@@ -64,5 +114,53 @@
 
 	<div class="chart-container">
 		<DatasetAccessesChart />
+		<Sources>
+			<div>
+				<div class="sources mb-6 flex flex-col gap-1">
+					<h3 class="text-lg">Sources</h3>
+					<p>
+						<span class="font-semibold">Dataset</span>: Meta Kaggle
+					</p>
+					<p>
+						<span class="font-semibold">Files</span>: KernelVersions.csv,
+						KernelVersionDatasetSources.csv
+					</p>
+					<p>
+						<span class="font-semibold">Link</span>:
+						<a
+							href="https://www.kaggle.com/code/spitfire2nd/why-should-i-kaggle?scriptVersionId=251547825&cellId=15"
+							class="underline">Code link</a
+						>
+					</p>
+				</div>
+				<div class="methodology mb-8 flex flex-col gap-1">
+					<h3 class="text-lg">Methodology</h3>
+					<ol class="list-decimal pl-5">
+						<li>
+							<p class="mb-1">
+								Identify latest version of each kernel by finding most recent creation date per
+								ScriptId
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Count number of datasets used per kernel version from dataset sources table
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Merge kernel versions with dataset counts, filling missing values with zero
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">Group by creation year and calculate total datasets used annually</p>
+						</li>
+						<li>
+							<p class="mb-1">Visualize yearly trends showing increasing dataset usage over time</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</Sources>
 	</div>
 </BodySection>

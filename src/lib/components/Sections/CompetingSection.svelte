@@ -33,7 +33,70 @@
 
 	<div class="chart-container">
 		<FirstCompetition></FirstCompetition>
-		<Sources></Sources>
+		<Sources>
+			<div>
+				<div class="sources mb-6 flex flex-col gap-1">
+					<h3 class="text-lg">Sources</h3>
+					<p>
+						<span class="font-semibold">Dataset</span>: Meta Kaggle
+					</p>
+					<p>
+						<span class="font-semibold">Files</span>: Kernels.csv, KernelVersions.csv,
+						KernelVersionCompetitionSources.csv, Competitions.csv
+					</p>
+					<p>
+						<span class="font-semibold">Link</span>:
+						<a
+							class="underline"
+							href="https://www.kaggle.com/code/spitfire2nd/why-should-i-kaggle?scriptVersionId=251547825&cellId=6"
+							>Code link</a
+						>
+					</p>
+				</div>
+				<div class="methodology mb-8 flex flex-col gap-1">
+					<h3 class="text-lg">Methodology</h3>
+					<ol class="list-decimal pl-5">
+						<li>
+							<p class="mb-1">Filter kernels to remove entries with missing creation dates</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Identify each user's first kernel by finding the earliest creation date per
+								AuthorUserId
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Link first kernels to their corresponding kernel versions and competition sources
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Merge with competition details to get titles, slugs, and host segment information
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Calculate competition popularity by counting frequency of each competition slug
+							</p>
+						</li>
+						<li><p class="mb-1">Select top 300 most popular competitions for analysis</p></li>
+						<li>
+							<p class="mb-1">
+								Create segment buckets by mapping host segments into broader categories (Learning,
+								Competitive, Recruitment, etc.)
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Export results showing which competitions newcomers choose for their first Kaggle
+								projects
+							</p>
+						</li>
+					</ol>
+				</div>
+			</div>
+		</Sources>
 	</div>
 
 	<p>
@@ -44,6 +107,62 @@
 
 	<div class="chart-container">
 		<CompetitionActivity></CompetitionActivity>
+		<Sources>
+			<div>
+				<div class="sources mb-6 flex flex-col gap-1">
+					<h3 class="text-lg">Sources</h3>
+					<p>
+						<span class="font-semibold">Dataset</span>: Meta Kaggle
+					</p>
+					<p>
+						<span class="font-semibold">Files</span>: Kernels.csv, KernelVersions.csv,
+						KernelVersionCompetitionSources.csv, Competitions.csv, ForumTopics.csv
+					</p>
+					<p>
+						<span class="font-semibold">Link</span>:
+						<a
+							href="https://www.kaggle.com/code/spitfire2nd/why-should-i-kaggle?scriptVersionId=251547825&cellId=8"
+							class="underline">Code link</a
+						>
+					</p>
+				</div>
+				<div class="methodology mb-8 flex flex-col gap-1">
+					<h3 class="text-lg">Methodology</h3>
+					<ol class="list-decimal pl-5">
+						<li>
+							<p class="mb-1">
+								Clean and filter kernels and competitions data, removing entries with missing dates
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Filter competitions to those lasting 2-16 weeks for meaningful weekly analysis
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Link kernels to competitions through kernel versions and competition sources
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Calculate weeks elapsed from competition start for each kernel creation
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Apply same linking and timing analysis to forum topics and forked notebooks
+							</p>
+						</li>
+						<li>
+							<p class="mb-1">
+								Filter all activities to 0-20 week timeframe relative to competition start dates
+							</p>
+						</li>
+					</ol>
+				</div>
+			</div></Sources
+		>
 	</div>
 
 	<p>
