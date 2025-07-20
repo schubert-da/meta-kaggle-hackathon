@@ -1,5 +1,6 @@
 <script>
 	import CompetingSection from '$lib/components/Sections/CompetingSection.svelte';
+	import Conclusion from '$lib/components/Sections/Conclusion.svelte';
 	import DataSection from '$lib/components/Sections/DataSection.svelte';
 	import RelevanceSection from '$lib/components/Sections/RelevanceSection.svelte';
 </script>
@@ -13,4 +14,5 @@
 	<CompetingSection></CompetingSection>
 	<DataSection></DataSection>
 	<RelevanceSection></RelevanceSection>
+	<Conclusion></Conclusion>
 </div>

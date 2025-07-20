@@ -5,15 +5,19 @@
 <section class="body-section">
 	<div class="title-container">
 		<div class="title-row">
-			<div class="chapter-number">
-				<p>{chapter}</p>
-			</div>
+			{#if chapter}
+				<div class="chapter-number">
+					<p>{chapter}</p>
+				</div>
+			{/if}
 
 			<h2 class="title">{title}</h2>
 		</div>
-		<div class="subtitle-row">
-			<p class="subtitle">{subtitle}</p>
-		</div>
+		{#if subtitle}
+			<div class="subtitle-row">
+				<p class="subtitle">{subtitle}</p>
+			</div>
+		{/if}
 	</div>
 
 	<div class="text-container">
@@ -75,6 +79,8 @@
 			p {
 				text-align: right;
 				text-wrap: balance;
+				font-style: italic;
+				font-size: calc(var(--font-size-0) + 1px);
 			}
 		}
 

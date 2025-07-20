@@ -51,7 +51,7 @@
 	<p>
 		That said, Kaggle's datasets do serve as a great middle ground for learning data prep - It’s
 		less complex than data that you might encounter as a data professional but it is miles better
-		than learning pandas on the five row mock datasets I started out with on w3schools.
+		than learning pandas on the five row datasets I started out with on w3schools.
 	</p>
 
 	<p>
