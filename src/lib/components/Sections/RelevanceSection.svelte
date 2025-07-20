@@ -47,6 +47,4 @@
 		systems, etc. so often this comes down equally to on the specifics of the notebook and the
 		design of the competition that it's tailored to.
 	</p>
-
-	<div class="chart-placeholder">maybe cards depicting success stories</div>
 </BodySection>
