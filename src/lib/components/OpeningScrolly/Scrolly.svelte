@@ -122,8 +122,6 @@
 		padding: 1em;
 		margin: 0 auto;
 
-		border: 1px solid #999;
-
 		&.large-step {
 			height: 70vh;
 		}
