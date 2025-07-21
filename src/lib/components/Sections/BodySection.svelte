@@ -50,10 +50,10 @@
 				align-items: center;
 				justify-content: center;
 
-				width: 96px;
-				height: 96px;
-				min-width: 96px;
-				min-height: 96px;
+				width: clamp(64px, 10vw, 96px);
+				height: clamp(64px, 10vw, 96px);
+				min-width: clamp(64px, 10vw, 96px);
+				min-height: clamp(64px, 10vw, 96px);
 				border: 1px solid #838383;
 				border-radius: 8px;
 
@@ -64,6 +64,18 @@
 				background-color: #ddbbc2;
 				stroke: #000;
 				stroke-width: 1px;
+			}
+
+			@media (max-width: 650px) {
+				justify-content: flex-start;
+				.chapter-number {
+					font-size: 42px;
+				}
+
+				h2 {
+					font-size: var(--font-size-2);
+					line-height: 1.2;
+				}
 			}
 		}
 
