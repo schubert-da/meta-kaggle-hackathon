@@ -10,7 +10,7 @@
 	let offset;
 	let progress;
 	let top = 0.1;
-	let threshold = 0.6;
+	let threshold = 0.9;
 	let bottom = 1.5;
 
 	$: scrollParams = { index, offset, progress };
@@ -132,9 +132,10 @@
 		color: #222;
 		padding: 1em;
 		margin: 0 auto;
+		pointer-events: all;
 
 		&.large-step {
-			height: 70vh;
+			height: 85vh;
 		}
 	}
 

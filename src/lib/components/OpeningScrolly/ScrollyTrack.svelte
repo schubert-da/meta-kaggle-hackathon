@@ -58,6 +58,10 @@
 			</div>
 		{/if}
 	{/each}
+
+	{#if scrollParams?.index > 1}
+		<div class="tracker" style:top="{trackHeight * scrollParams?.progress}px"></div>
+	{/if}
 </div>
 
 <style lang="scss">
@@ -67,6 +71,7 @@
 		padding: 32px 0;
 
 		.track-section {
+			position: relative;
 			display: flex;
 			flex-direction: row;
 			justify-content: end;
@@ -139,6 +144,31 @@
 					top: 50%;
 					transform: translate(100%, -50%) scale(1.03);
 				}
+			}
+		}
+
+		.tracker {
+			position: absolute;
+			top: 0;
+			right: 4px;
+			transform: translate(50%, -100%);
+
+			width: 36px;
+			height: 36px;
+			border: 4px solid #298f94;
+			border-radius: 100px;
+			background-color: white;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 16px;
+				height: 16px;
+				background-color: #298f94;
+				border-radius: 100px;
 			}
 		}
 	}

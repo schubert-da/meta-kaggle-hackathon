@@ -72,6 +72,18 @@
 		gap: 16px;
 
 		margin: 32px auto;
+
+		@media (max-width: 500px) {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			gap: 16px;
+
+			.reason-card {
+				width: 100%;
+				min-width: 250px;
+			}
+		}
 	}
 
 	.reason-card {
