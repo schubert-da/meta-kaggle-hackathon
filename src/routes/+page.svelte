@@ -9,10 +9,7 @@
 <div class="hero-section mb-12 max-w-[800px] pt-20">
 	<h1 class="mb-4">So Where Does Kaggle Fit In?</h1>
 	<div class="text-container">
-		<p>
-			Let's talk about some of these criticisms and maybe look at a bit of data along the way in the
-			next few sections
-		</p>
+		<p>Let's talk about some of these criticisms and maybe look at a bit of data along the way.</p>
 	</div>
 </div>
 
@@ -31,6 +28,7 @@
 		h1 {
 			font-size: var(--font-size-5);
 			text-align: center;
+			text-wrap: pretty;
 		}
 
 		p {
