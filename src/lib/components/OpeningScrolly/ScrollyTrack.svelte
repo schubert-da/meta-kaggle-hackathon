@@ -82,10 +82,14 @@
 
 			height: fit-content;
 			border-right: 10px solid #444;
-			transition: opacity 1s ease-in-out;
+			transition: all 1s ease-in-out;
 
 			&.active {
 				opacity: 1;
+
+				.log-container {
+					transform: scale(1) rotate(0deg);
+				}
 			}
 
 			&.heading {
@@ -132,6 +136,10 @@
 				border: 1px solid #444;
 				border-radius: 6px;
 				background-color: #b2cecf;
+				transform-origin: calc(100% + 10px) center;
+
+				transition: transform 0.2s ease-in 0.2s;
+				transform: scale(0.99) rotate(-2deg);
 
 				span {
 					font-family: Roboto, sans-serif;

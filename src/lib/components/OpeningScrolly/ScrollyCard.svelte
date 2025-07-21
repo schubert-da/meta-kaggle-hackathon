@@ -158,7 +158,7 @@
 			border-bottom: 1px solid #666;
 
 			h2.card-title {
-				margin-bottom: 8px;
+				margin-bottom: 14px;
 
 				font-family: Roboto, sans-serif;
 				font-weight: 600;
@@ -176,12 +176,12 @@
 					display: block;
 					font-weight: 500;
 					font-size: 18px;
-					margin-bottom: 4px;
+					margin-bottom: 12px;
 					color: #333333;
 				}
 
 				.leaderboard {
-					margin-bottom: 16px;
+					margin-bottom: 20px;
 				}
 
 				.bans {
