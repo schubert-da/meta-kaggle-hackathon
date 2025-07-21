@@ -6,8 +6,6 @@
 	import RelevanceSection from '$lib/components/Sections/RelevanceSection.svelte';
 </script>
 
-<Scrolly></Scrolly>
-
 <div class="hero-section mb-8 max-w-[800px]">
 	<h1 class="mb-4">Why Should I Kaggle</h1>
 	<div class="text-container">
