@@ -34,7 +34,7 @@
 		}
 
 		p {
-			font-size: var(--font-size-1);
+			font-size: calc(var(--font-size-0) + 2px);
 			text-wrap: balance;
 			text-align: center;
 		}

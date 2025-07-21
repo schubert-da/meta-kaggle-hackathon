@@ -38,6 +38,7 @@
 								<span class="font-semibold">Link</span>:
 								<a
 									href="https://www.kaggle.com/code/spitfire2nd/why-should-i-kaggle?scriptVersionId=251547825&cellId=13"
+									target="_blank"
 									class="underline">Code link</a
 								>
 							</p>
@@ -73,11 +74,6 @@
 					</div>
 				</Sources>
 			</div>
-
-			<p>
-				I do agree with this - we could do more on sourcing data although this wouldn’t lend itself
-				to the competition format …
-			</p>
 		</li>
 	</ol>
 
@@ -85,23 +81,24 @@
 		<li>
 			<strong class="mb-2 block">2. The data is too clean:</strong>
 			<p>
-				I understand where they're coming from but “too clean” is relative. Just about every
-				competition involves a fair bit of cleaning and data prep to start so saying that they're
-				all too clean is a gross exaggeration.
+				I understand where they're coming from but “too clean” is relative. Datasets range from
+				simple tabular structures to messy signal processing data. Some require extensive cleaning
+				and preprocessing to even begin to start exploring the data.
 			</p>
-			<br />
+			<!-- 
 			<p>
 				For example, the dataset behind this analysis is ~42 GB in size split across 41 different
 				files to be joined on specific id cols for which documentation has been less than stellar,
 				in addition to data which is missing, and more.
 			</p>
+			 -->
 		</li>
 	</ol>
 
 	<p>
-		That said, Kaggle's datasets do serve as a great middle ground for learning data prep - It’s
-		less complex than data that you might encounter as a data professional but it is miles better
-		than learning pandas on the five row datasets I started out with on w3schools.
+		That said, Kaggle's datasets do serve as a great middle ground for learning data prep - It's
+		less complex than data that you might encounter as a professional but it's miles better than
+		learning pandas on the five row datasets I started out with on w3schools.
 	</p>
 
 	<p>
@@ -110,7 +107,7 @@
 		foundational concepts like python basics, data cleaning, linear regression, etc.
 	</p>
 
-	<p>Even the dataset usage over the years has grown considerably:</p>
+	<p>We even see how users are engaging more and more with Kaggle's datasets over the years:</p>
 
 	<div class="chart-container">
 		<DatasetAccessesChart />
@@ -129,6 +126,7 @@
 						<span class="font-semibold">Link</span>:
 						<a
 							href="https://www.kaggle.com/code/spitfire2nd/why-should-i-kaggle?scriptVersionId=251547825&cellId=15"
+							target="_blank"
 							class="underline">Code link</a
 						>
 					</p>
