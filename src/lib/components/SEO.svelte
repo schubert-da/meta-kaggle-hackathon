@@ -33,7 +33,7 @@
 	<meta property="og:url" content={currentUrl} />
 	<meta property="og:title" content={pageTitle} />
 	<meta property="og:description" content={pageDescription} />
-	<meta property="og:image" content={`${siteUrl}image/share-img.jpg`} />
+	<meta property="og:image" content={`${siteUrl}images/share-img.jpg`} />
 	<meta property="og:site_name" content={defaultTitle} />
 	<meta property="og:locale" content="en_US" />
 
@@ -42,7 +42,7 @@
 	<meta property="twitter:url" content={currentUrl} />
 	<meta property="twitter:title" content={pageTitle} />
 	<meta property="twitter:description" content={pageDescription} />
-	<meta property="twitter:image" content={`${siteUrl}image/share-img.jpg`} />
+	<meta property="twitter:image" content={`${siteUrl}images/share-img.jpg`} />
 
 	<!-- Additional SEO -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
