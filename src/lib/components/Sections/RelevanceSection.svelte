@@ -78,9 +78,9 @@
 	</div>
 
 	<p>
-		There will never be a perfect substitute for on-the-job experienc. Expect Kaggle competitions to
-		be the magical resource that somehow teaches enthusiasts to be prepared for whatever domain or
-		problem statement comes their way is unrealistic to say the least.
+		There will never be a perfect substitute for on-the-job experience. Expect Kaggle competitions
+		to be the magical resource that somehow teaches enthusiasts to be prepared for whatever domain
+		or problem statement comes their way is unrealistic to say the least.
 	</p>
 
 	<p>

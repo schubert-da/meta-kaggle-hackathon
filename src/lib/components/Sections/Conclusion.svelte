@@ -12,8 +12,8 @@
 	</p>
 
 	<p>
-		What it will help you do is <em>learn</em>. To paraphrase an analogy I once read - "practising
-		data science on Kaggle is like learning to drive in a car park". You learn how to start the car,
+		What it will help you do is learn. To paraphrase an analogy I once read - "practising data
+		science on Kaggle is like learning to drive in a car park". You learn how to start the car,
 		accelerate and brake, shift gears and get into the flow of driving. This doesn't mean that you
 		know how to fend for yourself on a multilane highway or brave inclement weather. But it's any
 		day better than never getting into the car in the first place.
@@ -26,9 +26,9 @@
 	</p>
 
 	<p>
-		Delve into Kaggle with the sole intention of learning, <em>not winning</em>. Understand why you
-		are doing things the way you are rather than chasing the first shiny new tool that will do the
-		work for you. And when you feel like you're getting the hang of things, maybe gather some real
-		world data and work on a side project that resonates with you. Until then, happy Kaggling!
+		Delve into Kaggle with the sole intention of learning, not winning. Understand why you are doing
+		things the way you are rather than chasing the first shiny new tool that will do the work for
+		you. And when you feel like you're getting the hang of things, maybe gather some real world data
+		and work on a side project that resonates with you. Until then, happy Kaggling!
 	</p>
 </BodySection>
