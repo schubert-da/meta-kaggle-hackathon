@@ -5,8 +5,6 @@
 	const filteredSteps = scrollySteps.filter((s) => s?.trackHeaderText || s?.trackLogText);
 
 	$: trackHeight = null;
-	$: console.log('trackHeight', trackHeight);
-	// $: console.log('scrollParams', scrollParams);
 	$: scrollY = 0;
 </script>
 
