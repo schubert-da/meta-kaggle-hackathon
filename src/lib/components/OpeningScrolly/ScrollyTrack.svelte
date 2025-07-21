@@ -98,6 +98,7 @@
 				border-right: none;
 				border-top-left-radius: 100px;
 				border-bottom-left-radius: 100px;
+				background-color: #fff;
 
 				&::after {
 					content: '';
@@ -127,7 +128,7 @@
 				padding: 8px 14px;
 				border: 1px solid #444;
 				border-radius: 6px;
-				background-color: #edcfcf;
+				background-color: #b2cecf;
 
 				span {
 					font-family: Roboto, sans-serif;

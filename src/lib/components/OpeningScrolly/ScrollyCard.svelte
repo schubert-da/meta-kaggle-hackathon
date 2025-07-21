@@ -1,34 +1,74 @@
 <script>
+	import { index } from 'd3';
+	import { scrollySteps, createLineChartSVG } from './ScrollySteps';
+
 	export let scrollParams;
+
+	$: currentNotebooks = 0;
+	$: currentTopics = 0;
+	$: currentScore = [];
+	$: currentDay = 0;
+
+	$: chartWidth = 0;
+	$: SVGCode = currentScore.length > 1 ? createLineChartSVG(currentScore, chartWidth, 60, 4) : '';
+
+	$: if (scrollParams?.index) {
+		if (scrollySteps[scrollParams.index]?.notebooks) {
+			currentNotebooks = scrollySteps[scrollParams.index]?.notebooks;
+		}
+
+		if (scrollySteps[scrollParams.index]?.topics) {
+			currentTopics = scrollySteps[scrollParams.index]?.topics;
+		}
+
+		if (scrollySteps[scrollParams.index]?.day) {
+			currentDay = scrollySteps[scrollParams.index]?.day;
+		}
+
+		if (scrollySteps[scrollParams.index]?.score) {
+			currentScore = scrollySteps
+				.slice(0, scrollParams.index + 1)
+				.filter((s) => s?.score)
+				.map((s) => s.score);
+		}
+	}
 </script>
 
-<div class="card">
-	<div class="card-image">
-		<img src="/images/share-image.jpg" alt="Logo of a Kaggle competition posting" />
+<div class="card" class:opacity-0={scrollParams.index >= scrollySteps.length - 2}>
+	<div class="card-image border-b-[3px] border-[#444]">
+		<img src="/images/comp-image.jpg" alt="Logo of a Kaggle competition posting" />
 	</div>
 
 	<div class="card-content">
 		<h2 class="card-title">GeoCORP - Global Green Cover Detection 2025</h2>
-		{#if scrollParams?.index < 2}
+		{#if scrollParams?.index < 4}
 			<div class="card-desc">
 				Analyze high-resolution satellite imagery to accurately classify and quantify vegetation
 				coverage using computer vision techniques.
 			</div>
 		{:else}
 			<div class="stats">
-				<div class="leaderboard">
-					<span class="stat-title">LEADERBOARD SCORE</span>
-					<div class="line-chart h-[100px] w-full bg-gray-200"></div>
-				</div>
+				{#if currentScore.length > 1}
+					<div class="leaderboard" bind:clientWidth={chartWidth}>
+						<span class="stat-title"
+							>LEADERBOARD SCORE <span class="font-normal"
+								>({currentScore[currentScore.length - 1]})</span
+							></span
+						>
+						<div class="line-chart w-full">
+							{@html SVGCode}
+						</div>
+					</div>
+				{/if}
 
 				<div class="bans">
 					<div class="ban">
 						<span class="stat-title">NOTEBOOKS</span>
-						<span class="stat-value">1,234</span>
+						<span class="stat-value">{currentNotebooks}</span>
 					</div>
 					<div class="ban">
 						<span class="stat-title">TOPICS</span>
-						<span class="stat-value">20</span>
+						<span class="stat-value">{currentTopics}</span>
 					</div>
 				</div>
 			</div>
@@ -37,7 +77,7 @@
 
 	<div class="card-footer">
 		<span class="prize"> $25,000 </span>
-		<span class="deadline"> 92 days left </span>
+		<span class="deadline"> {92 - currentDay} days left </span>
 	</div>
 </div>
 
@@ -56,6 +96,7 @@
 
 		font-family: Roboto, sans-serif;
 		color: #333;
+		transition: opacity 1s ease-in-out;
 
 		.card-content {
 			padding: 20px var(--card-padding);
@@ -69,6 +110,10 @@
 				font-size: 22px;
 				letter-spacing: -0.2px;
 				line-height: 1.2;
+			}
+
+			.card-desc {
+				font-size: 17px;
 			}
 
 			.stats {

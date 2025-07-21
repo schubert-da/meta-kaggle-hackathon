@@ -2,6 +2,7 @@
 	import Scroller from '@sveltejs/svelte-scroller';
 	import ScrollyCard from './ScrollyCard.svelte';
 	import ScrollyTrack from './ScrollyTrack.svelte';
+	import ReasonsStep from './ReasonsStep.svelte';
 	import { scrollySteps, stepHeights } from './ScrollySteps';
 
 	let count;
@@ -30,13 +31,21 @@
 			{#each scrollySteps as step, index}
 				<section
 					class:large-step={step?.foregroundText || step?.empty}
-					style:justify-content={index === 0 ? 'flex-start' : 'center'}
+					style:justify-content={index === 0 ? 'center' : 'center'}
+					style:max-width={step?.foregroundText === 'manual' ? '1000px' : '800px'}
 				>
 					{#if step?.foregroundText}
-						<div class="foreground-text">
-							<p>
-								{@html step?.foregroundText}
-							</p>
+						<div
+							class="foreground-text"
+							style:max-width={step?.foregroundText === 'manual' ? '1000px' : '800px'}
+						>
+							{#if step?.foregroundText === 'manual'}
+								<ReasonsStep />
+							{:else}
+								<p>
+									{@html step?.foregroundText}
+								</p>
+							{/if}
 						</div>
 					{:else}
 						<div style:height={$stepHeights[index] + 'px'} class="foreground-text opacity-0">
@@ -52,6 +61,7 @@
 <style lang="scss">
 	.scrolly-container {
 		position: relative;
+		padding-bottom: 40vh;
 
 		width: 100%;
 	}
@@ -108,6 +118,7 @@
 	[slot='foreground'] {
 		width: 100%;
 		pointer-events: none;
+		z-index: 3000;
 	}
 
 	section {

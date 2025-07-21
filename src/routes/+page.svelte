@@ -6,8 +6,8 @@
 	import RelevanceSection from '$lib/components/Sections/RelevanceSection.svelte';
 </script>
 
-<div class="hero-section mb-8 max-w-[800px]">
-	<h1 class="mb-4">Why Should I Kaggle</h1>
+<div class="hero-section mb-12 max-w-[800px] pt-20">
+	<h1 class="mb-4">So Where Does Kaggle Fit In?</h1>
 	<div class="text-container">
 		<p>
 			Let's talk about some of these criticisms and maybe look at a bit of data along the way in the
@@ -22,3 +22,21 @@
 	<RelevanceSection></RelevanceSection>
 	<Conclusion></Conclusion>
 </div>
+
+<style lang="scss">
+	.hero-section {
+		margin-bottom: 90px;
+		margin-top: 40px;
+
+		h1 {
+			font-size: var(--font-size-5);
+			text-align: center;
+		}
+
+		p {
+			font-size: var(--font-size-1);
+			text-wrap: balance;
+			text-align: center;
+		}
+	}
+</style>

@@ -20,5 +20,19 @@
 	.scrolly-container {
 		width: 100%;
 		padding: 0 calc(var(--page-padding) - 0.5rem);
+		background-color: #ebd5b6;
+
+		position: relative;
+	}
+
+	.scrolly-container::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 150px;
+		pointer-events: none;
+		background: linear-gradient(to bottom, transparent, #fff 100%);
 	}
 </style>

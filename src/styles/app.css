@@ -107,6 +107,10 @@ section {
     margin: 80px 0;
 }
 
+.milton__embed {
+    max-width: 100%;
+}
+
 .milton__embed .text-highlight {
     display: inline-block;
     background-color: var(--color-palette-grey);
