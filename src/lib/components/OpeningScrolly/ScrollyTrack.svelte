@@ -1,58 +1,65 @@
-<div class="track">
-	<div class="track-section heading">
-		<div class="heading-container">
-			<span> Registration </span>
-		</div>
-	</div>
-	<div class="track-section" style:--additional-padding="{Math.random() * 20}px">
-		<div class="log-container">
-			<span>
-				You haven’t worked with image data before so you decide to fork a starter notebook
-			</span>
+<script>
+	import { getScrollyTextIndex, scrollySteps, stepHeights } from './ScrollySteps';
+	export let scrollParams;
 
-			<div class="arrow">
-				<svg
-					width="21"
-					height="19"
-					viewBox="0 0 21 19"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M0.999999 16.0001C15.5 18 18.5 15.5 18.5 0.500002"
-						stroke="#444444"
-						stroke-width="4"
-					/>
-				</svg>
-			</div>
-		</div>
-	</div>
-	<div class="track-section" style:--additional-padding="{Math.random() * 20}px">
-		<div class="log-container">
-			<span> Then we study one of the early EDA notebooks </span>
+	const filteredSteps = scrollySteps.filter((s) => s?.trackHeaderText || s?.trackLogText);
 
-			<div class="arrow">
-				<svg
-					width="21"
-					height="19"
-					viewBox="0 0 21 19"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M0.999999 16.0001C15.5 18 18.5 15.5 18.5 0.500002"
-						stroke="#444444"
-						stroke-width="4"
-					/>
-				</svg>
+	$: trackHeight = null;
+	$: console.log('trackHeight', trackHeight);
+	// $: console.log('scrollParams', scrollParams);
+	$: scrollY = 0;
+</script>
+
+<svelte:window bind:scrollY />
+
+<div
+	class="track"
+	bind:clientHeight={trackHeight}
+	style="transform: translateY( calc( -1 * {scrollY * 0.75}px + 50vh))"
+>
+	{#each filteredSteps as step}
+		{@const stepIndex = getScrollyTextIndex(step)}
+		{#if step?.trackHeaderText}
+			<div
+				bind:clientHeight={$stepHeights[stepIndex]}
+				class="track-section heading"
+				class:active={stepIndex <= scrollParams?.index}
+			>
+				<div class="heading-container">
+					<span> {step?.trackHeaderText} </span>
+				</div>
 			</div>
-		</div>
-	</div>
-	<div class="track-section heading">
-		<div class="heading-container">
-			<span> Week 2-4 </span>
-		</div>
-	</div>
+		{:else if step?.trackLogText}
+			<div
+				bind:clientHeight={$stepHeights[stepIndex]}
+				class="track-section"
+				class:active={stepIndex <= scrollParams?.index}
+				style:--additional-padding="{Math.random() * 20}px"
+			>
+				<div class="log-container">
+					<span>
+						{step?.trackLogText}
+					</span>
+
+					<div class="arrow">
+						<svg
+							width="21"
+							height="19"
+							viewBox="0 0 21 19"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.999999 16.0001C15.5 18 18.5 15.5 18.5 0.500002"
+								stroke="#444444"
+								stroke-width="4"
+							/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		{/if}
+	{/each}
 </div>
 
 <style lang="scss">
@@ -60,17 +67,23 @@
 		width: 100%;
 		height: 100%;
 		padding: 32px 0;
-		border: 1px solid red;
 
 		.track-section {
 			display: flex;
 			flex-direction: row;
 			justify-content: end;
 			align-items: center;
+			opacity: 0;
+
 			padding: calc(10px + var(--additional-padding)) 16px;
 
 			height: fit-content;
 			border-right: 10px solid #444;
+			transition: opacity 1s ease-in-out;
+
+			&.active {
+				opacity: 1;
+			}
 
 			&.heading {
 				height: 80px;
@@ -104,6 +117,7 @@
 					font-family: Roboto, sans-serif;
 					font-size: calc(var(--font-size-1) - 1.75px);
 					font-weight: 500;
+					white-space: nowrap;
 				}
 			}
 
