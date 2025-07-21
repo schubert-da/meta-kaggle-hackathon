@@ -1,6 +1,8 @@
 <script>
 	import { index } from 'd3';
 	import { scrollySteps, createLineChartSVG } from './ScrollySteps';
+	import { onMount } from 'svelte';
+	import gsap from 'gsap';
 
 	export let scrollParams;
 
@@ -12,17 +14,43 @@
 	$: chartWidth = 0;
 	$: SVGCode = currentScore.length > 1 ? createLineChartSVG(currentScore, chartWidth, 60, 4) : '';
 
+	let notebooksElement;
+	let topicsElement;
+	let daysLeftElement;
+
+	let prevNotebooks = 0;
+	let prevTopics = 0;
+	let prevDay = 0;
+
 	$: if (scrollParams?.index) {
 		if (scrollySteps[scrollParams.index]?.notebooks) {
-			currentNotebooks = scrollySteps[scrollParams.index]?.notebooks;
+			const newNotebooks = scrollySteps[scrollParams.index]?.notebooks;
+			if (newNotebooks !== prevNotebooks && notebooksElement) {
+				animateCounter(notebooksElement, prevNotebooks, newNotebooks);
+				prevNotebooks = newNotebooks;
+			}
+			currentNotebooks = newNotebooks;
 		}
 
 		if (scrollySteps[scrollParams.index]?.topics) {
-			currentTopics = scrollySteps[scrollParams.index]?.topics;
+			const newTopics = scrollySteps[scrollParams.index]?.topics;
+			if (newTopics !== prevTopics && topicsElement) {
+				animateCounter(topicsElement, prevTopics, newTopics);
+				prevTopics = newTopics;
+			}
+			currentTopics = newTopics;
 		}
 
 		if (scrollySteps[scrollParams.index]?.day) {
-			currentDay = scrollySteps[scrollParams.index]?.day;
+			const newDay = scrollySteps[scrollParams.index]?.day;
+			const newDaysLeft = 92 - newDay;
+			const prevDaysLeft = 92 - prevDay;
+
+			if (newDay !== prevDay && daysLeftElement) {
+				animateCounter(daysLeftElement, prevDaysLeft, newDaysLeft);
+				prevDay = newDay;
+			}
+			currentDay = newDay;
 		}
 
 		if (scrollySteps[scrollParams.index]?.score) {
@@ -32,6 +60,31 @@
 				.map((s) => s.score);
 		}
 	}
+
+	function animateCounter(element, fromValue, toValue) {
+		// Create a temporary object to animate
+		const counter = { value: fromValue };
+
+		gsap.to(counter, {
+			value: toValue,
+			duration: 0.8,
+			ease: 'power2.out',
+			onUpdate: function () {
+				// Format the number with commas for notebooks
+				if (element === notebooksElement && counter.value >= 1000) {
+					element.textContent = Math.round(counter.value).toLocaleString();
+				} else {
+					element.textContent = Math.round(counter.value);
+				}
+			}
+		});
+	}
+
+	onMount(() => {
+		if (notebooksElement) notebooksElement.textContent = currentNotebooks;
+		if (topicsElement) topicsElement.textContent = currentTopics;
+		if (daysLeftElement) daysLeftElement.textContent = 92 - currentDay;
+	});
 </script>
 
 <div class="card" class:opacity-0={scrollParams.index >= scrollySteps.length - 2}>
@@ -64,11 +117,11 @@
 				<div class="bans">
 					<div class="ban">
 						<span class="stat-title">NOTEBOOKS</span>
-						<span class="stat-value">{currentNotebooks}</span>
+						<span class="stat-value" bind:this={notebooksElement}>{currentNotebooks}</span>
 					</div>
 					<div class="ban">
 						<span class="stat-title">TOPICS</span>
-						<span class="stat-value">{currentTopics}</span>
+						<span class="stat-value" bind:this={topicsElement}>{currentTopics}</span>
 					</div>
 				</div>
 			</div>
@@ -77,7 +130,9 @@
 
 	<div class="card-footer">
 		<span class="prize"> $25,000 </span>
-		<span class="deadline"> {92 - currentDay} days left </span>
+		<span class="deadline">
+			<span bind:this={daysLeftElement}>{92 - currentDay}</span> days left
+		</span>
 	</div>
 </div>
 
