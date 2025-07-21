@@ -14,8 +14,8 @@
 				<h3>1. Well defined objectives</h3>
 				<p>
 					Kaggle competitions have a well defined objective and metrics that models will be scored
-					against. In the real world, stakeholders themselves might not know what they want and what
-					success looks like.
+					against. <br /><br />In the real world, stakeholders themselves might not know what they
+					want.
 				</p>
 			</div>
 		</div>
@@ -27,8 +27,9 @@
 			<div class="card-content">
 				<h3>2. Data is handed to you</h3>
 				<p>
-					Kaggle competitions have a partially cleaned dataset provided, whereas in real-world
-					projects, data collection and cleaning can be a significant part of the work.
+					In actual projects, data collection and cleaning can be a significant part of the work. <br
+					/><br /> Knowing what data to look for and where to find it, how much is enough, the cleaning
+					processes required are all part of the game
 				</p>
 			</div>
 		</div>
@@ -49,8 +50,8 @@
 	</div>
 
 	<p>
-		These are just a few of the issues that cause many experts to not recommend Kaggle competitions
-		as a way to learn.
+		These are just a few of the ways that show that Kaggle competitions are far from a perfect
+		mirror to real life work.
 	</p>
 </div>
 

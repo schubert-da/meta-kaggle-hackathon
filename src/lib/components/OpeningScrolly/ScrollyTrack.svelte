@@ -32,7 +32,7 @@
 				bind:clientHeight={$stepHeights[stepIndex]}
 				class="track-section"
 				class:active={stepIndex <= scrollParams?.index}
-				style:--additional-padding="{Math.random() * 20}px"
+				style:--additional-padding="{Math.random() * 80}px"
 			>
 				<div class="log-container">
 					<span>

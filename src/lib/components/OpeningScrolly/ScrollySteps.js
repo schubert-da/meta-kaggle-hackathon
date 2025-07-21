@@ -2,7 +2,7 @@ import { writable } from "svelte/store";
 
 export const scrollySteps = [
     {
-        foregroundText: "Three months of Python tutorials, statistics lectures, and mock datasets are behind you. Your certificate says \"Data Scientist\" but you feel anything but qualified.<br><br> You heard a bit about Kaggle competitions, so you find a competition that seems interesting and you decide to finally take the plunge.<br><br> Scroll down to follow your journey.",
+        foregroundText: "<p style='text-align: center'>Three months of Python tutorials, statistics lectures, and mock datasets are behind you. Your certificate says \"Data Scientist\" but you feel anything but qualified.<br><br> You heard a bit about Kaggle competitions, so you find a competition that seems interesting and you decide to finally take the plunge.<br><br> <span style='font-size: 16px;'>Scroll down to follow your journey</span></p>",
     },
     {
         foregroundText: ''
@@ -12,51 +12,56 @@ export const scrollySteps = [
         day: 0,
     },
     {
-        trackLogText: "You haven't worked with image data before so you decide to fork a starter notebook",
-        score: 0.32,
+        trackLogText: "You join the competition and immediately realise that you have never work on image data before. No worries, you can just fork the starter notebook and figure it out as you go",
         notebooks: 633,
         topics: 8,
         day: 1,
     },
     {
-        trackLogText: "Then we study one of the early EDA notebooks",
-        score: 0.45,
+        trackLogText: "Slowly you start to run a few cells, trying to understand the data. You are not sure what you are doing, but you are excited to finally start working on a real project.",
+        score: 0.44,
         notebooks: 910,
         topics: 12,
         day: 5,
     },
     {
         trackHeaderText: "Weeks 2-4",
-        score: 0.54,
     },
     {
-        trackLogText: "You finally start writing code of your own. Slowly understanding the data as you plot a couple charts along the way",
+        trackLogText: "You finally start writing code of your own. A bit of data cleanup as you practise with pandas - it does take several tries, but you do get there in the end.",
         score: 0.52,
         notebooks: 1330,
         topics: 16,
         day: 11,
     },
     {
-        trackLogText: "Tinkering with the model, understanding the different parameters and how they affect the results. It is now that you publish your first notebook.",
-        score: 0.54,
+        trackLogText: "Your first chart! A simple histogram of the data distribution - and a pretty one at that.",
+        score: 0.52,
+        notebooks: 1330,
+        topics: 16,
+        day: 11,
+    },
+    {
+        trackLogText: "Tinkering with the model, you know the theory behind the different parameters but this is your first time tweaking things - some things work better than others. It is now that you publish your first notebook.",
+        score: 0.55,
         notebooks: 1337,
         topics: 19,
         day: 17,
     },
     {
-        trackLogText: "As expected, you don't have amazing success on the leaderboard. But you are happy to have made it this far.",
-        score: 0.53,
+        trackLogText: "As expected, you don't do so great on the leaderboard...",
+        score: 0.57,
         notebooks: 1483,
         topics: 23
     },
     {
         trackHeaderText: "Weeks 5-8",
-        score: 0.64,
+        score: 0.61,
 
     },
     {
-        trackLogText: "Someone has shared a notebook showcasing an ensemble technique that you have never seen before. You decide to try it out, immediately seeing an improvement in your results.",
-        score: 0.61,
+        trackLogText: "Someone shared a notebook showcasing an ensemble technique that you have never seen before. You decide to try it out, immediately seeing the biggest improvement in your results so far.",
+        score: 0.66,
         notebooks: 1741,
         topics: 25,
         day: 38
@@ -70,10 +75,10 @@ export const scrollySteps = [
     },
     {
         trackHeaderText: "Weeks 9-12",
-        score: 0.68,
+        score: 0.65,
     },
     {
-        trackLogText: "You continue to refine your model, reading up on others' kernels, experimenting with different feature engineering methods. Your understanding of the problem deepens.",
+        trackLogText: "You continue to refine your model, reading up on others' approaches, experimenting with different feature engineering methods. Your understanding of the problem deepens...",
         score: 0.67,
         notebooks: 2172,
         topics: 31,
@@ -81,7 +86,7 @@ export const scrollySteps = [
     },
     {
         trackLogText: "Finally, you submit your model and eagerly await the results.",
-        score: 0.68,
+        score: 0.69,
         notebooks: 2251,
         topics: 35,
         day: 80
@@ -91,7 +96,7 @@ export const scrollySteps = [
         day: 92,
     },
     {
-        foregroundText: "You might not have won, but you learned a lot along the way. And while you might want to jump into applying this on your next job, there are a couple things you might need to understand first",
+        foregroundText: "Spoiler alert - you didn't win but that's expected with your first few competitions. But you learned a lot along the way - from taking your first steps in code, right down to building an actual working computer vision model. <br><br>That said, while you might want to jump into applying this on your next job, there are a couple things you might need to understand about Kaggle competitions:",
     },
     {
         foregroundText: "manual",
